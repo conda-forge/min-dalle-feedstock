@@ -1,5 +1,5 @@
 {% set name = "min-dalle" %}
-{% set version = "0.4.0" %}
+{% set version = "0.4.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/min-dalle-{{ version }}.tar.gz
-  sha256: 0249e593e17aaae6253957965270c5f5796844dd8cfa28c46aae5f0e533751aa
+  sha256: a9043630fc9d4297cf63f0fc2f62096c16fb9a75d8bbf5d04b03452f9a9cb2da
 
 build:
   noarch: python
