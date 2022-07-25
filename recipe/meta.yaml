@@ -1,5 +1,5 @@
 {% set name = "min-dalle" %}
-{% set version = "0.4.4" %}
+{% set version = "0.4.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/min-dalle-{{ version }}.tar.gz
-  sha256: 4c86720d7c2999200496eb83a02d379153880bf22177872df02f8b05be772111
+  sha256: 28f3a72893603452f299804affa5f3e36d5ec25d21c24219efd4fb17c8d9fd31
 
 build:
   noarch: python
@@ -19,6 +19,7 @@ requirements:
     - pip
     - python >=3.6
   run:
+    - emoji
     - numpy >=1.21
     - pillow >=7.1
     - python >=3.6
