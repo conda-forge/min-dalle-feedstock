@@ -6,23 +6,23 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/min-dalle-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/min-dalle-{{ version }}.tar.gz
   sha256: 36f9b4e37630bf0c4ee8ab5cd838b858882cbd02e0e8c3e8fcffef65ad9662c3
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
     - emoji
     - numpy >=1.21
     - pillow >=7.1
-    - python >=3.6
+    - python >={{ python_min }}
     - requests >=2.23
     - pytorch >=1.11
     - typing_extensions >=4.1
@@ -34,6 +34,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/kuprel/min-dalle
